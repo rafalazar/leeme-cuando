@@ -31,7 +31,7 @@ export const MoodCard: React.FC<MoodCardProps> = ({
       }}
     >
       <h1 className='text-2xl'>{mood.toUpperCase()}</h1>
-      <span className='text-2xl'>{emoji}</span>
+      <span className='text-3xl'>{emoji}</span>
     </motion.div>
   );
 };

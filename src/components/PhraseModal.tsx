@@ -26,7 +26,8 @@ export const PhraseModal: React.FC<PhraseModalProps> = ({
     <AnimatePresence>
       {showModal && (
         <motion.div
-          className='fixed inset-0 z-50 grid place-items-center h-screen w-screen bg-slate-800/80'
+          className='fixed inset-0 z-50 grid place-items-center bg-slate-800/80'
+          style={{height: '100dvh'}}
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           exit={{ opacity: 0 }}
