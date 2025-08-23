@@ -38,10 +38,10 @@ export const PhraseModal: React.FC<PhraseModalProps> = ({
           <motion.div
             style={{ backgroundColor: bgColor }}
             className='p-6 rounded-2xl text-center mx-2'
-            initial={{ scale: 0.8, opacity: 0, y: 30 }}
+            initial={{ scale: 0.5, opacity: 0, y: 50 }}
             animate={{ scale: 1, opacity: 1, y: 0 }}
-            exit={{ scale: 0.8, opacity: 0, y: 30 }}
-            transition={{ duration: 0.3, ease: 'easeOut' }}
+            exit={{ scale: 0.7, opacity: 0, y: 30 }}
+            transition={{ type: 'spring', stiffness: 300, damping: 10 }}
             onClick={(e) => e.stopPropagation()}
           >
             <span className='text-2xl'>{getPhrase(moodName as MoodKey)}</span>
