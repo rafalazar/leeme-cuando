@@ -14,7 +14,7 @@ export const PhraseModal: React.FC<PhraseModalProps> = ({
   bgColor,
   setShowModal,
   showModal,
-  setMoodSelected,
+  // setMoodSelected,
 }) => {
   const getPhrase = (mood: MoodKey) => {
     const phrases = moodPhrases[mood];
@@ -32,7 +32,7 @@ export const PhraseModal: React.FC<PhraseModalProps> = ({
           exit={{ opacity: 0 }}
           onClick={() => {
             setShowModal(false);
-            setMoodSelected('');
+            // setMoodSelected('');
           }}
         >
           <motion.div
@@ -40,7 +40,12 @@ export const PhraseModal: React.FC<PhraseModalProps> = ({
             className='p-6 rounded-2xl text-center mx-2'
             initial={{ scale: 0.5, opacity: 0, y: 50 }}
             animate={{ scale: 1, opacity: 1, y: 0 }}
-            exit={{ scale: 0.7, opacity: 0, y: 30 }}
+            exit={{
+              scale: 0.7,
+              opacity: 0,
+              y: 30,
+              transition: { duration: 0.2 },
+            }}
             transition={{ type: 'spring', stiffness: 300, damping: 10 }}
             onClick={(e) => e.stopPropagation()}
           >

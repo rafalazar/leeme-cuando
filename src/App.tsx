@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 import './App.css';
 import { MoodCard } from './components/MoodCard';
 import { PhraseModal } from './components/PhraseModal';
@@ -16,11 +16,6 @@ function App() {
   const [moodSelected, setMoodSelected] = useState<string>('');
   const [bgSelected, setBgSelected] = useState<string>('');
 
-  useEffect(() => {
-    if (moodSelected !== '') {
-      setShowModal(true);
-    }
-  }, [moodSelected]);
   return (
     <>
       <PhraseModal
@@ -43,6 +38,7 @@ function App() {
             emoji={mood.emoji}
             setMoodSelected={setMoodSelected}
             setBgSelected={setBgSelected}
+            setShowModal={setShowModal}
           />
         ))}
       </div>

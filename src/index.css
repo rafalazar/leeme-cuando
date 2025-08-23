@@ -1,10 +1,14 @@
+@import url('https://fonts.googleapis.com/css2?family=Comic+Relief:wght@400;700&family=Edu+NSW+ACT+Cursive:wght@400..700&display=swap');
 @import "tailwindcss";
 
 :root {
-  font-family: "Edu NSW ACT Foundation Variable", cursive;
+  font-family: "Comic Relief", system-ui;
   font-weight: 400;
   line-height: 1.5;
-  font-style: normal;
 
   background-color: #fdf0d5;
+}
+
+@theme {
+  --font-comic-relief: "Comic Relief", system-ui; 
 }

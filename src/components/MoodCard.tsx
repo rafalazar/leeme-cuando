@@ -7,6 +7,7 @@ interface MoodCardProps {
   color: string;
   setMoodSelected: (value: string) => void;
   setBgSelected: (value: string) => void;
+  setShowModal: (value: boolean) => void;
 }
 
 export const MoodCard: React.FC<MoodCardProps> = ({
@@ -15,6 +16,7 @@ export const MoodCard: React.FC<MoodCardProps> = ({
   emoji,
   setMoodSelected,
   setBgSelected,
+  setShowModal,
 }) => {
   return (
     <motion.div
@@ -25,6 +27,7 @@ export const MoodCard: React.FC<MoodCardProps> = ({
       onClick={() => {
         setMoodSelected(mood);
         setBgSelected(color);
+        setShowModal(true)
       }}
     >
       <h1 className='text-2xl'>{mood.toUpperCase()}</h1>
